@@ -1,14 +1,12 @@
 "use client";
 
-import Background from "@/components/Background";
-import MotionDiv from "@/components/MotionDiv"
-import { motion } from "framer-motion";
+import desktop from "@/assets-ctu/background/hero-back.jpg";
 import mobile from "@/assets/home/background-home-mobile.jpg";
 import tablet from "@/assets/home/background-home-tablet.jpg";
-import desktop from "@/assets-ctu/background/hero-back.jpg";
-import { SCALE_UP, SLIDE_LEFT } from "@/lib/data";
-import { ArrowLongRightIcon} from '@heroicons/react/24/solid'
-import { NavbarLink } from "flowbite-react";
+import Background from "@/components/Background";
+import MotionDiv from "@/components/MotionDiv";
+import { SLIDE_LEFT } from "@/lib/data";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Home() {
@@ -27,12 +25,12 @@ export default function Home() {
         >
    
         
-          <div className="space-y-2  mb-8">
-            <h2 className=" text-white text-4xl  lg:text-7xl ">Your Device, Our protection.</h2>
-            <h2 className=" text-white text-4xl  lg:text-7xl">Protecting What Matters</h2>
-            <h2 className=" text-white text-4xl  lg:text-7xl">Most</h2>
+          <div className="space-y-2  mb-20">
+            <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl ">Your Device, Our protection.</h2>
+            <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl">Protecting What Matters</h2>
+            <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl">Most</h2>
           </div>
-            <div className="relative z-10">
+            <div className="relative z-10 mb-2">
               <Link href="/news" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 
               font-medium rounded-xl text-2xl px-10 py-3 me-2 opacity-100 
               dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
