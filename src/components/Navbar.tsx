@@ -56,7 +56,7 @@ function Navbar() {
         <header
       className={` ${barlow.variable} fixed top-0  bg-white z-30 flex justify-between w-full items-center px-6 md:px-0 md:pl-10`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center py-2 md:py-0">
         <Image src={logo} alt="logo image" className="w-20 h-auto md:w-28" />
       </div>
 
@@ -91,7 +91,7 @@ function Navbar() {
           href={href}
           className="relative text-gray-950 font-semibold uppercase transition hover:text-blue-600"
         >
-          <li className="relative group py-4 md:py-0">
+          <li className="relative group py-3 md:py-0">
             <span className="block">{title}</span>
             <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
