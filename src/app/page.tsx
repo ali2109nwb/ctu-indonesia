@@ -6,6 +6,8 @@ import MotionDiv from "@/components/MotionDiv";
 import { SLIDE_LEFT } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Carousel from '@/components/Carausel'
+
 
 export default function Home() {
 
@@ -24,6 +26,7 @@ export default function Home() {
    
         
           <div className="space-y-2  mb-20">
+            
             <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl ">Your Device, Our protection.</h2>
             <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl">Protecting What Matters</h2>
             <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl">Most</h2>
@@ -35,17 +38,17 @@ export default function Home() {
                 More News
               </Link>
             </div>
-          <div className="z-10 lg:grid lg:grid-cols-2 gap-2 hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white bg-black backdrop-blur-x1 w-full p-4 bg-opacity-70 rounded-xl ">
-            <div className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nisi modi fugit optio itaque ducimus consequatur accusamus repellendus qui. Sed quod ducimus perferendis expedita! Adipisci impedit libero repudiandae laudantium at.
+              
+            <div className="z-10 lg:grid lg:grid-cols-2 gap-2 hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white bg-black backdrop-blur-x1 w-full p-4 bg-opacity-70 rounded-xl ">
+            <div className="text-xl" >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!
               <div className="bar bg-white w-1"></div>
             </div>
             <div className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nisi modi fugit optio itaque ducimus consequatur accusamus repellendus qui. Sed quod ducimus perferendis expedita! Adipisci impedit libero repudiandae laudantium at.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut odit molestiae, ipsa doloremque deserunt natus dicta fuga architecto mollitia dignissimos molestias impedit, fugit voluptatum dolores distinctio temporibus exercitationem ut. Eaque!
             </div>
-  
-
           </div>
+        <Carousel/>
           </motion.div>
       </main>
     </MotionDiv>
