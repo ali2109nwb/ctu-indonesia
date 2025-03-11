@@ -39,6 +39,17 @@ h5 {
   font-family: var(--barlow-font);
   letter-spacing: 2.35px;
 }
+.nav-font {
+  font-family: "Clash Grotesk", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+}
+.dropDown-disMob {
+  font-family: "Clash Grotesk", sans-serif;
+}
+.dropDown-ul {
+  font-family: "Clash Grotesk", sans-serif;
+}
 .nav-text {
   font-size: 1rem; /*16px*/
   font-family: var(--barlow-font);
