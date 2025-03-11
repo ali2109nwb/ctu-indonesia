@@ -56,7 +56,7 @@ function Navbar() {
         <header
       className={` ${barlow.variable} fixed top-0  bg-white z-30 flex justify-between w-full items-center px-6 md:px-0 md:pl-10`}
     >
-      <div className="flex items-center py-2 md:py-0">
+      <div className="flex items-center py-2 md:py-0 ml-4 md:ml-14">
         <Image src={logo} alt="logo image" className="w-20 h-auto md:w-28" />
       </div>
 
