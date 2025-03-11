@@ -1,8 +1,6 @@
 "use client";
 
-import desktop from "@/assets-ctu/background/hero-back.jpg";
-import mobile from "@/assets/home/background-home-mobile.jpg";
-import tablet from "@/assets/home/background-home-tablet.jpg";
+import tablet, { default as desktop, default as mobile } from "@/assets-ctu/background/hero-back.jpg";
 import Background from "@/components/Background";
 import MotionDiv from "@/components/MotionDiv";
 import { SLIDE_LEFT } from "@/lib/data";
@@ -34,7 +32,7 @@ export default function Home() {
               <Link href="/news" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 
               font-medium rounded-xl text-2xl px-10 py-3 me-2 opacity-100 
               dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                More Info
+                More News
               </Link>
             </div>
           <div className="z-10 lg:grid lg:grid-cols-2 gap-2 hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white bg-white backdrop-blur-xl w-full p-4 bg-opacity-30 rounded-xl ">
