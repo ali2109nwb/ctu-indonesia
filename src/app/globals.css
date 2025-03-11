@@ -11,11 +11,10 @@ h1 {
 }
 h2 {
   font-size: 6.25rem; /*100px*/
-  font-family: var(--bellefair-font);
+  /* font-family: var(--bellefair-font); */
 }
 h3 {
   font-size: 3.5rem; /*56px*/
-  font-family: var(--bellefair-font);
   line-height: 1;
 }
 h4 {

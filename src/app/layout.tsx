@@ -15,7 +15,7 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata = {
-  title: "SpaceShip WebSite",
+  title: "CTU Indonesia",
   description: "develop by DearBoy",
 };
 

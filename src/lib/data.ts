@@ -43,7 +43,7 @@ export const SLIDE_RIGHT = {
         x: 0,
         transition:{
             type: 'spring',
-            duration: 1,
+            duration: 3,
             once:true
         }
     },
