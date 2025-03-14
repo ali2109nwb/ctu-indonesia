@@ -20,16 +20,18 @@ const pages = [
 
 const productDropdown = [
   {
-    category: "DISPLAY",
+    category: "Display & LED",
+    href: "display-products",
     links: [
-      { title: "Best Product", href: "/product/display/best-product" },
-      { title: "Wall Display", href: "/product/display/wall-display" },
-      { title: "Flexible Display", href: "/product/display/flexible-display" },
-      { title: "Kiosk", href: "/product/display/kiosk" },
+      { title: "Wall Display", href: "/display-products/walldisplay" },
+      { title: "LED Screen", href: "/display-products/led-screen" },
+      { title: "Interactive", href: "/display-products/interactive" },
+      { title: "Kiosk", href: "/display-products/kiosk" },
     ],
   },
   {
-    category: "MOBILE",
+    category: "Mobile",
+    href: "mobile-products",
     links: [
       { title: "Best Product", href: "/product/mobile/best-product" },
       { title: "Explosion Proof", href: "/product/mobile/explosion-proof" },
@@ -122,12 +124,12 @@ function Navbar() {
                   md:absolute md:top-full md:left-1/2 md:transform md:-translate-x-1/2 md:w-64 md:opacity-0 md:invisible md:scale-95 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:scale-100
                   ${dropdownOpen ? "block mt-2 md:mt-0 opacity-100 visible scale-100" : "hidden md:group-hover:block"}`}
                 >
-                  <div className="flex justify-between gap-4 p-6 relative">
+                  <div className="font-clash flex justify-between gap-4 p-6 relative">
                     {productDropdown.map((category, catIndex) => (
                       <div key={catIndex}>
-                        <h4 className="dropDown-disMob font-semibold text-blue-600 text-sm">
+                        <Link href={category.href} className="font-clash dropDown-disMob font-semibold text-blue-600 text-sm hover:text-blue-400">
                           {category.category}
-                        </h4>
+                        </Link>
                         <ul className="dropDown-ul mt-1 space-y-1 text-xs">
                           {category.links.map((link, linkIndex) => (
                             <li key={linkIndex}>

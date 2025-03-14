@@ -1,7 +1,8 @@
 
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { Barlow_Condensed, Bellefair } from "next/font/google";
 import "./globals.css";
-import { Bellefair, Barlow_Condensed } from "next/font/google";
 
 const bellefair = Bellefair({
   subsets: ["latin"],
@@ -26,9 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bellefair.variable} ${barlow.variable}  bg-primary`}>
+      <body className={`${bellefair.variable} ${barlow.variable} bg-primary flex flex-col min-h-screen`}>
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
+        <Footer /> 
       </body>
     </html>
   );

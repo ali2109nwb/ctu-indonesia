@@ -2,6 +2,7 @@
 
 import tablet, { default as desktop, default as mobile } from "@/assets-ctu/background/hero-back.jpg";
 import Background from "@/components/Background";
+import FeaturedSolutions from "@/components/FeaturedSolutions/FeaturedSolutions";
 import MotionDiv from "@/components/MotionDiv";
 import { SLIDE_LEFT } from "@/lib/data";
 import { motion } from "framer-motion";
@@ -43,12 +44,15 @@ export default function Home() {
             <div className="text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nisi modi fugit optio itaque ducimus consequatur accusamus repellendus qui. Sed quod ducimus perferendis expedita! Adipisci impedit libero repudiandae laudantium at.
             </div>
-  
-
           </div>
           </motion.div>
       </main>
+      <section className="w-full h-20 bg-gray-100"></section>
+      <section className="relative z-20">
+        <FeaturedSolutions />
+      </section>
     </MotionDiv>
+    
   );
 }
 

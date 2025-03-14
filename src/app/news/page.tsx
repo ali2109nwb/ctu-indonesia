@@ -1,9 +1,16 @@
-import React from 'react'
+"use client"
 
-const News = () => {
+import NewsSlider from "@/components/NewsSlider";
+// import NewsList from "@/components/NewsList";
+import MotionDiv from '@/components/MotionDiv';
+
+export default function NewsPage() {
   return (
-    <div>News</div>
-  )
+    <MotionDiv>
+        <main className="bg-primary min-h-screen max-w-full w-screen overflow-x-hidden py-8">
+          <NewsSlider />
+        </main>
+    </MotionDiv>
+    
+  );
 }
-
-export default News

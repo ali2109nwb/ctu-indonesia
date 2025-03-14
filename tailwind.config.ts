@@ -22,6 +22,17 @@ module.exports = {
       fontFamily: {
         primary: [" var(--barlow-font)"],
         secondary: [" var(--bellefair-font)"],
+        clash: ["Clash Grotesk", "sans-serif"],
+      },
+
+      animation: {
+        marquee: "marquee 60s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(20%)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
     },
   },

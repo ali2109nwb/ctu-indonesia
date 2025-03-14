@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .text-bellfaire {
   font-family: var(--bellefair-font);
 }
@@ -67,6 +68,7 @@ p {
 .transition {
   transition-duration: 250ms;
 }
+
 
 @media screen and (max-width: 480px) {
   html {
