@@ -10,7 +10,7 @@ interface BackgroundProps {
 
 function Background({mobile , tablet, desktop} : BackgroundProps ) {
   return (
-    <div className=" fixed z-0  h-screen w-screen top-0 left-0">
+    <div className=" z-0  h-2/6 w-screen  left-0">
         <picture>
             <source media="(min-width:1024px)" srcSet={desktop} />
             <source media="(min-width:768px)" srcSet={tablet} />

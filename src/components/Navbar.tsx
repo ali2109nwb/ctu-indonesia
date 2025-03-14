@@ -77,7 +77,7 @@ function Navbar() {
 
       {/* Mobile Menu Button */}
       <button onClick={() => setOpened(!opened)} className="relative z-50 w-6 h-6 md:hidden">
-        <Bars4Icon className={`transition ${opened ? "opacity-0" : "opacity-100"} size-18 absolute top-1/2 right-0 -translate-y-1/2 w-full h-full`} />
+        <Bars4Icon className={`transition ${opened ? "opacity-0" : "opacity-100"} size{18} absolute top-1/2 right-0 -translate-y-1/2 w-full h-full`} />
         <XMarkIcon className={`transition ${opened ? "opacity-100" : "opacity-0"} absolute top-1/2 right-0 -translate-y-1/2 w-full h-full`} />
       </button>
 

@@ -1,9 +1,10 @@
 "use client";
 
 import tablet, { default as desktop, default as mobile } from "@/assets-ctu/background/hero-back.jpg";
+import bg from "@/assets-ctu/background/featured-back.jpeg";
 import Background from "@/components/Background";
 import MotionDiv from "@/components/MotionDiv";
-import { SLIDE_LEFT } from "@/lib/data";
+import { SLIDE_LEFT, SLIDE_RIGHT } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Carousel from '@/components/Carausel'
@@ -13,18 +14,15 @@ export default function Home() {
 
 
   return (
-    <MotionDiv>
-      <Background
-        mobile={mobile.src}
-        tablet={tablet.src}
-        desktop={desktop.src}
-      />
-      <main className="relative z-10 flex flex-col-reverse p-10 md:px-24 lg:pt-16 mt-16">
-        <motion.div
+    <div>
+      <MotionDiv>
+      <Background mobile={mobile.src} tablet={tablet.src} desktop={desktop.src} />
+      <main className="relative z-10 flex flex-col-reverse p-10 md:px-24 lg:pt-16 mt-16 mb-40">
+        <div>
+             <motion.div
           variants={SLIDE_LEFT}
         >
-   
-        
+
           <div className="space-y-2  mb-20">
             
             <h2 className=" text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl ">Your Device, Our protection.</h2>
@@ -38,20 +36,49 @@ export default function Home() {
                 More News
               </Link>
             </div>
-              
-            <div className="z-10 lg:grid lg:grid-cols-2 gap-2 hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white bg-black backdrop-blur-x1 w-full p-4 bg-opacity-70 rounded-xl ">
-            <div className="text-xl" >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!
-              <div className="bar bg-white w-1"></div>
+          </motion.div>
+          <motion.div variants={SLIDE_RIGHT}>
+            <Link href={"/news"}>
+            <Carousel/>
+            </Link>
+          </motion.div>
+        </div>
+      </main>
+      
+    </MotionDiv>
+    <div className="relative z-0">
+      <img src={bg.src} className="object-cover" alt="" />
+    
+      <div className="absolute z-10 top-0 left-0 ml-8 mt-20 ">
+         <div className="absolute inset-0 bg-black rounded-xl py-80 hover:bg-opacity-40 hover:bg-blue-500 backdrop-blur-sm opacity-40 z-0  px-[750px] "></div>
+         <div className="relative pl-5 z-10 mt-5 grid grid-cols-2  ">
+          <div className="">
+            <h3 className="text-2xl font-bold">Featured Solution</h3>
+            <h6> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem error eius modi incidunt suscipit eum doloribus, quibusdam explicabo nostrum dignissimos nihil omnis ex quae iusto assumenda quo totam quis sequi?</h6>
+          </div>
+          <div className="grid grid-cols-11 gap-4 ">
+            <div className=" mt-5 col-span-5">
+              <div className="bg-white rounded-lg mb-10 flex flex-col">
+                <span className="font-semibold mx-5">Lorem ipsum dolor sit amet</span>
+                <span className="mx-5">Lorem ipsum dolor sit amet</span>
+              </div>
+              <div className="bg-white px-20 py-36 rounded-lg"></div>
             </div>
-            <div className="text-xl">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut odit molestiae, ipsa doloremque deserunt natus dicta fuga architecto mollitia dignissimos molestias impedit, fugit voluptatum dolores distinctio temporibus exercitationem ut. Eaque!
+            <div></div>
+            <div className=" mt-5 col-span-5">
+              <div className="bg-white px-20 py-32 rounded-lg mb-10 -mt-20"></div>
+              <div className="bg-white px-20 py-32 rounded-lg"></div>
             </div>
           </div>
-        <Carousel/>
-          </motion.div>
-      </main>
-    </MotionDiv>
+         </div>
+         </div> 
+      
+      </div>
+    </div>
+
+  
+    
+
   );
 }
 
