@@ -7,7 +7,7 @@ const duplicatedNewsItems = [...newsItems, ...newsItems, ...newsItems];
 export default function NewsSlider() {
   return (
     <div className="mt-8 w-full overflow-hidden">
-      <div className="pt-20 mb-8">
+      <div className="pt-20 mb-8 font-clash">
         <h1 className="text-center text-4xl text-white font-bold">NEWS</h1>
         <p className="text-center text-white">Exploring Update News About</p>
       </div>
