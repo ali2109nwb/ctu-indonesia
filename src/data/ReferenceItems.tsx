@@ -3,28 +3,29 @@ const ReferenceItems = [
       id: 1,
       title: "WISMA TUGU LED",
       image: "/assets/recent-projects/Wisma-Tugu-LED.png",
-      path: "/display-products/walldisplay",
-      size: "medium"
+      description: "Solusi tampilan interaktif untuk kiosk digital dengan pengalaman pengguna lebih baik.",
+      pb:"P1.8"
     },
     {
       id: 2,
       title: "BSI DANAREKSA WALLDISPLAY",
       image: "/assets/recent-projects/BSI-Danareksa-Walldisplay.png",
-      path: "/display-products/led-screen"
+      description: "Solusi tampilan interaktif untuk kiosk digital dengan pengalaman pengguna lebih baik.",
+      pb:"Bezel 3.5"
     },
     {
       id: 3,
       title: "PELINDO LED FLEXIBLE",
       image: "/assets/recent-projects/Pelindo-LED-Flexible.png",
-      path: "/display-products/interactive",
-      size: "large"
+      description: "Solusi tampilan interaktif untuk kiosk digital dengan pengalaman pengguna lebih baik.",
+      pb:"P1.8"
     },
     {
       id: 4,
       title: "INDOOR LED PELINDO",
       image: "/assets/product/display/kiosk.jpg",
-      path: "/display-products/kiosk",
-      size: "small"
+      description: "Solusi tampilan interaktif untuk kiosk digital dengan pengalaman pengguna lebih baik.",
+      pb:"P1.8"
     }
   ];
   

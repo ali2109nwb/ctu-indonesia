@@ -1,8 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
 import { FADE } from "@/lib/data";
-
-
+import { motion } from "framer-motion";
+import React from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -11,7 +9,6 @@ interface Props {
 function MotionDiv({ children }: Props) {
   return (
     <motion.div
-      key={Math.random().toString()}
       variants={FADE}
       initial="hidden"
       animate="visible"
