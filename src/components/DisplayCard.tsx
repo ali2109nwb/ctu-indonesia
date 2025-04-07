@@ -4,6 +4,11 @@ import DisplayItems from '@/data/DisplayItems';
 import Link from 'next/link';
 
 const DisplayCard = () => {
+
+  const largeImageIds = [1,2,4,5];
+
+  const mtLargeIds = [1];
+
   return (
     <div className="relative min-h-screen">
         {/* Banner Section */}
@@ -42,10 +47,16 @@ const DisplayCard = () => {
                 <img
                     src={item.hoverImage}
                     alt={item.title}
-                    className="w-[100px] h-auto absolute inset-0 m-auto transition-transform duration-500 ease-in-out group-hover:scale-150 group-hover:rotate-3"
+                    style={{
+                      width: largeImageIds.includes(item.id) ? "400px" : "280px",
+                      height: largeImageIds.includes(item.id) ? "400px" : "280px",
+                    }}
+                    className={`absolute inset-0 m-auto transition-transform duration-500 ease-in-out group-hover:scale-125 group-hover:rotate-2 ${
+                      mtLargeIds.includes(item.id) ? "items-center" : ""
+                    }`}
                 />
 
-                  <h3 className="font-clash absolute bottom-6 left-0 right-0 text-center text-white text-lg font-bold">{item.title}</h3>
+                  <h3 className="font-clash absolute bottom-6 left-0 right-0 text-center text-white text-lg font-bold group-hover:scale-140 group-hover:rotate-1">{item.title}</h3>
                 </div>
                   
                 </div>

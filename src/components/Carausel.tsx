@@ -1,35 +1,30 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-
-import 'swiper/css/autoplay';
-
-function rand(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-
-function createSlide(text1: string, text2: string) {
+function createSlide(imageSrc: string, text: string) {
   return (
-    <SwiperSlide>      
-         <div  className="cursor-pointer  flex  lg:justify-center lg:items-center z-10 
-         lg:grid lg:grid-cols-9 gap-2 
-          hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white 
-          bg-black backdrop-blur-x1 w-full p-4 bg-opacity-70 rounded-xl ">
-            <div className="text-3xl ml-10 mr-5 flex col-span-5" >
-              {text1}
-            <div className="hidden lg:block md:block border-l-2 border-white h-40"></div>
-            </div>
-            <div className="text-xl ml-10 mr-10 col-span-4">
-              {text2}
-            </div>
-          </div>
+    <SwiperSlide>
+      <div className="cursor-pointer flex flex-col md:flex-row lg:justify-center lg:items-center z-10 
+      lg:grid lg:grid-cols-9 gap-2
+      hover:bg-slate-500 hover:bg-opacity-60 hover:backdrop-blur-xl text-white 
+      bg-black backdrop-blur-x1 w-full md:p-2 bg-opacity-70 rounded-xl max-h-[300px] max-w-[80%] mx-auto">
         
+        {/* Bagian kiri - Gambar */}
+        <div className="w-full md:w-auto col-span-5 flex justify-between items-center">
+          <img src={imageSrc} alt="News Image" className="w-full md:w-2/3 h-auto rounded-xl" />
+        </div>
+
+        {/* Bagian kanan - Teks */}
+        <div className="text-xl ml-2 mr-10 col-span-4 flex text-left items-center mt-2 md:mt-0  ">
+          {text}
+        </div>
+      </div>
     </SwiperSlide>
   );
 }
@@ -42,13 +37,11 @@ export default () => {
       navigation
       autoplay={{ delay: 2000 }}
       pagination={{ clickable: true }}
+      className="mt-38"
     >
-     
-      {createSlide("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!")}
-      {createSlide("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!")}
-      {createSlide("Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat sed nam quasi magnam ad eum, labore nisi modi tenetur necessitatibus pariatur quo saepe maxime magni dolore rerum voluptatum totam!")}
-      
-
+      {createSlide("/assets/news/videotron-news.png", "Sambar Videotron api dari lantai 7 gedung K-Link . . .")}
+      {createSlide("/assets/news/newsiphone16-back.jpg", "Pemerintah melalui Kementerian Perindustrian (Kemenperin) berencana memblokir atau menonaktifkan nomor seri International Mobile Equipment Identity (IMEI) iPhone 16 . . .")}
+      {createSlide("/assets/news/digital-news.png", "Pemerintah terus mempercepat transformasi digital untuk mendukung kemandirian ekonomi, penguasaan teknologi, dan pengembangan sumber daya manusia (SDM) unggul . . . ")}
     </Swiper>
   );
 };

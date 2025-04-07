@@ -20,25 +20,32 @@ const pages = [
 
 const productDropdown = [
   {
-    category: "Display & LED",
+    category: "DISPLAY & LED SOLUTIONS",
     href: "display-products",
     links: [
       { title: "Wall Display", href: "/display-products/walldisplay" },
-      { title: "LED Screen", href: "/display-products/led-screen" },
+      { title: "LED Indoor", href: "/display-products/led-screen" },
+      { title: "LED Outdoor", href: "/display-products/led-screen-outdoor" },
       { title: "Interactive", href: "/display-products/interactive" },
+      { title: "Signage", href: "/display-products/signage" },
       { title: "Kiosk", href: "/display-products/kiosk" },
     ],
   },
   {
-    category: "Mobile",
+    category: "MOBILE SOLUTIONS",
     href: "mobile-products",
-    links: [
-      { title: "Best Product", href: "/product/mobile/best-product" },
-      { title: "Explosion Proof", href: "/product/mobile/explosion-proof" },
-      { title: "Thermal", href: "/product/mobile/thermal" },
-      { title: "Barcode", href: "/product/mobile/barcode" },
-    ],
+    links: [],
   },
+  // {
+  //   category: "Mobile",
+  //   href: "mobile-products",
+  //   links: [
+  //     // { title: "Best Product", href: "/mobile-products/#conquest" },
+  //     // { title: "Explosion Proof", href: "/product/mobile/explosion-proof" },
+  //     // { title: "Thermal", href: "/product/mobile/thermal" },
+  //     // { title: "Barcode", href: "/product/mobile/barcode" },
+  //   ],
+  // },
 ];
 
 const barlow = Barlow_Condensed({
@@ -124,13 +131,13 @@ function Navbar() {
                   md:absolute md:top-full md:left-1/2 md:transform md:-translate-x-1/2 md:w-64 md:opacity-0 md:invisible md:scale-95 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:scale-100
                   ${dropdownOpen ? "block mt-2 md:mt-0 opacity-100 visible scale-100" : "hidden md:group-hover:block"}`}
                 >
-                  <div className="font-clash flex justify-between gap-4 p-6 relative">
+                  <div className="font-sans flex flex-col p-6 relative">
                     {productDropdown.map((category, catIndex) => (
                       <div key={catIndex}>
-                        <Link href={category.href} className="font-clash dropDown-disMob font-semibold text-blue-600 text-sm hover:text-blue-400">
+                        <Link href={category.href} className="font-bold text-blue-600 text-sm hover:text-blue-400">
                           {category.category}
                         </Link>
-                        <ul className="dropDown-ul mt-1 space-y-1 text-xs">
+                        <ul className="mt-1 space-y-1 text-xs">
                           {category.links.map((link, linkIndex) => (
                             <li key={linkIndex}>
                               <Link
@@ -142,10 +149,10 @@ function Navbar() {
                             </li>
                           ))}
                         </ul>
-                        <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div>
+                        {/* <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div> */}
                       </div>
                     ))}
-                    <div className="absolute hidden md:block left-1/2 top-4 bottom-4 w-[1px] bg-gray-300 transform -translate-x-1/2"></div>
+                    {/* <div className="absolute hidden md:block left-1/2 top-4 bottom-4 w-[1px] bg-gray-300 transform -translate-x-1/2"></div> */}
                   </div>
                 </div>
               </div>

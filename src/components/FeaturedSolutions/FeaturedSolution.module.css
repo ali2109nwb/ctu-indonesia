@@ -4,10 +4,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 88vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    z-index: 1;
   }
   
   .container {
@@ -15,7 +19,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 1200px;
     padding: 4rem 1rem;
   }
@@ -57,7 +61,7 @@
   .card h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #000; /* Pastikan teks tetap hitam */
+    color: #000; 
   }
   
   .card p {
@@ -66,3 +70,27 @@
     margin-top: 0.5rem;
   }
   
+  .icon {
+    width: 45px;
+    height: auto;
+    margin-bottom: 8px;
+    
+  }
+
+  .blueLine {
+    width: 0;
+    height: 4px;
+    background-color: #007bff;
+    margin-top: 10px;
+    border-radius: 2px;
+    animation: expandLine 3s ease-out forwards;
+  }
+  
+  @keyframes expandLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }

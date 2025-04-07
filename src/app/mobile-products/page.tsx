@@ -5,7 +5,9 @@ import tablet, { default as desktop, default as mobile } from "@/assets-ctu/back
 import agmM7 from "@/assets-ctu/product/mobile/Rugged-Technology-930.png";
 import Background from "@/components/Background";
 import MotionDiv from "@/components/MotionDiv";
-import MobileItems from "@/data/MobileItems";
+import AgmItems from "@/data/AgmItems";
+import ConquestItems from "@/data/ConquestItems";
+import EmdoorItems from "@/data/EmdoorItems";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -16,6 +18,7 @@ interface Product {
   image: string;
   description: string;
   specs: { name: string; value: string; icon: string }[];
+  brosur: string;
 }
 
 
@@ -28,7 +31,6 @@ const MobilePage = () => {
   //   3: { width: 260, height: 260, mt: "mt-8" }, // Misalnya, ID 4 juga ingin diperbesar
   // };
 
-  console.log("MobileItems:", MobileItems); 
 
   return (
     <MotionDiv>
@@ -45,9 +47,9 @@ const MobilePage = () => {
         {/* Content in Center */}
         <div className="relative z-10 flex w-full max-w-6xl px-6 md:px-24 items-center">
           {/* Text Section */}
-          <div className="text-white md:w-1/2 text-center md:text-left font-clash md:mb-8">
-            <h3 className="md:whitespace-nowrap text-4xl md:text-5xl font-bold">Rugged Technology</h3>
-            <h3 className="md:whitespace-nowrap text-4xl md:text-5xl font-bold py-4">Ready for Any Challenge</h3>
+          <div className="text-white md:w-1/2 text-left md:text-left font-clash md:mb-8">
+            <h3 className="md:whitespace-nowrap text-3xl ml-2 md:ml-0 mt-1 md:mt-0 md:text-5xl font-bold">Rugged Technology</h3>
+            <h3 className="md:whitespace-nowrap text-3xl ml-2 md:ml-0 md:text-5xl font-bold py-4">Ready for Any Challenge</h3>
           </div>
 
           {/* Product Image */}
@@ -59,9 +61,9 @@ const MobilePage = () => {
           >
             <Image
               src={agmM7}
-              width={380}
-              height={380}
-              className="max-w-xs md:max-w-md md:mt-28 md:ml-80 drop-shadow-2xl"
+              // width={380}
+              // height={380}
+              className="max-w-xs md:max-w-md mt-24 md:mt-28 md:ml-80 drop-shadow-2xl w-[380px] h-[380px] md:w-[400] md:h-[450px]"
               alt="AGM M7"
             />
           </motion.div>
@@ -72,12 +74,69 @@ const MobilePage = () => {
       {/* Quick Menu Section */}
       <section className="py-10 bg-white text-center font-clash font-bold text-sm">
         <h3 className="text-2xl font-semibold text-gray-900">Quick Menu</h3>
-        <div className="mt-4 flex flex-wrap justify-center gap-4">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full">I.SAFE MOBILE</button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full">EMDOOR</button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full">BARTEC</button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full">AGM</button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full">CONQUEST</button>
+
+        <div className="mt-4 flex flex-wrap justify-center gap-4 ">
+        <button
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              const section = document.getElementById("conquest");
+              if (section) {
+                window.history.replaceState(null, "", "#conquest"); // Update URL tanpa refresh
+                const yOffset = -95; // Atur offset biar judulnya ikut terlihat
+                const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+                setTimeout(() => {
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }, 150); // Delay kecil biar smooth
+              }
+            }
+          }}
+          className="bg-blue-600 text-white px-6 py-2 rounded-full z-10 font-sans"
+        >
+          CONQUEST
+        </button>
+
+        <button
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              const section = document.getElementById("emdoor");
+              if (section) {
+                window.history.replaceState(null, "", "#emdoor"); // Update URL tanpa refresh
+                const yOffset = -95; // Atur offset biar judulnya ikut terlihat
+                const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+                setTimeout(() => {
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }, 150); // Delay kecil biar smooth
+              }
+            }
+          }}
+          className="bg-blue-600 text-white px-6 py-2 rounded-full z-10 font-sans"
+        >
+          EMDOOR
+        </button>
+
+        <button
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              const section = document.getElementById("agm");
+              if (section) {
+                window.history.replaceState(null, "", "#agm"); // Update URL tanpa refresh
+                const yOffset = -95; // Atur offset biar judulnya ikut terlihat
+                const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+                setTimeout(() => {
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }, 150); // Delay kecil biar smooth
+              }
+            }
+          }}
+          className="bg-blue-600 text-white px-6 py-2 rounded-full z-10 font-sans"
+        >
+          AGM
+        </button>
+
+
         </div>
       </section>
 
@@ -126,13 +185,13 @@ const MobilePage = () => {
         </div>
       </section>
       
-      {/* Product Cards isafe */}
-      <section className="py-16 px-6 bg-gradient-to-b from-[#EABFB9] to-[#F5F5F5] text-center relative">
-        <h3 className="text-2xl font-bold text-gray-900 text-left max-w-6xl mx-auto">I.SAFE MOBILE</h3>
+      {/* Product Cards conquest */}
+      <section id="conquest" className="py-16 px-6 bg-gradient-to-b from-[#EABFB9] to-[#F5F5F5] text-center relative">
+        <h3 className="text-2xl font-bold text-gray-900 text-left max-w-6xl mx-auto font-sans">CONQUEST</h3>
         <div className="h-[2px] w-full bg-orange-500 my-2"></div>
         
-        <div className="mt-8 flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-          {MobileItems.map((product) => (
+        <div className="mt-8 flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+          {ConquestItems.map((product) => (
             <motion.div
               key={product.id}
               className="relative w-72 p-6 rounded-2xl shadow-lg cursor-pointer overflow-hidden bg-white"
@@ -140,7 +199,7 @@ const MobilePage = () => {
               onClick={() => setSelectedProduct(product)}
             >
               {/* <div className="absolute inset-0 bg-orange-500 rounded-lg transform scale-105 z-[-1]"></div> */}
-              <div className="absolute top-2 left-2 w-4 h-4 bg-orange-500 rounded-full"></div>
+              <div className="absolute top-2 right-2 w-4 h-4 bg-orange-500 rounded-full"></div>
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 2 }}
                 transition={{ type: "spring", stiffness: 200 }}
@@ -149,26 +208,26 @@ const MobilePage = () => {
                 // className={`mx-auto ${product.id === 1 ? 'mt-10': product.id === 3 ? 'mt-10' : '' }`}
               >
                 <Image src={product.image}
-                width={ [3,1].includes(product.id) ? 400 : 200 }
-                height={ [3,1].includes(product.id) ? 400 : 200 }
+                width={ [3,1].includes(product.id) ? 250 : 200 }
+                height={ [3,1].includes(product.id) ? 250 : 200 }
                 alt={product.name} 
-                className={`mx-auto ${product.id === 1 ? 'mt-10 pl-8' : product.id === 3 ? 'mt-10 pl-8' : '' }`}
+                className={`mx-auto ${product.id === 1 ? 'mt-2 pl-8 pb-8' : product.id === 3 ? 'mt-4 pl-8 pb-2' : '' }`}
 
                 />
               </motion.div>
-              <div className="absolute bottom-[-0] left-0 right-0 bg-orange-500 text-white font-bold text-sm rounded-b-lg w-[100%] px-4 py-2">Rugged Devices {product.name}</div>
+              <div className="font-sans font-bold absolute bottom-[-0] left-0 right-0 bg-orange-500 text-white text-sm rounded-b-lg w-[100%] px-4 py-2">{product.name}</div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Product Cards conquest */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-300 to-blue-200 text-center relative">
-        <h3 className="text-2xl font-bold text-gray-900 text-left max-w-6xl mx-auto">EMDOOR</h3>
+      {/* Product Cards emdoor */}
+      <section id="emdoor" className="py-16 px-6 bg-gradient-to-b from-blue-300 to-blue-200 text-center relative">
+        <h3 className="font-sans text-2xl font-bold text-gray-900 text-left max-w-6xl mx-auto">EMDOOR</h3>
         <div className="h-[2px] w-full bg-blue-500 my-2"></div>
         
         <div className="mt-8 flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-          {MobileItems.map((product) => (
+          {EmdoorItems.map((product) => (
             <motion.div
               key={product.id}
               className="relative w-72 p-6 rounded-2xl shadow-lg cursor-pointer overflow-hidden bg-white"
@@ -176,7 +235,7 @@ const MobilePage = () => {
               onClick={() => setSelectedProduct(product)}
             >
               {/* <div className="absolute inset-0 bg-orange-500 rounded-lg transform scale-105 z-[-1]"></div> */}
-              <div className="absolute top-2 left-2 w-4 h-4 bg-blue-800 rounded-full"></div>
+              <div className="absolute top-2 right-2 w-4 h-4 bg-blue-800 rounded-full"></div>
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 2 }}
                 transition={{ type: "spring", stiffness: 200 }}
@@ -185,14 +244,49 @@ const MobilePage = () => {
                 // className={`mx-auto ${product.id === 1 ? 'mt-10': product.id === 3 ? 'mt-10' : '' }`}
               >
                 <Image src={product.image}
-                width={ [3,1].includes(product.id) ? 400 : 200 }
-                height={ [3,1].includes(product.id) ? 400 : 200 }
+                width={ [3,1].includes(product.id) ? 150 : 150 }
+                height={ [3,1].includes(product.id) ? 150 : 150 }
                 alt={product.name} 
-                className={`mx-auto ${product.id === 1 ? 'mt-10 pl-8' : product.id === 3 ? 'mt-10 pl-8' : '' }`}
+                className={`mx-auto ${product.id === 1 ? 'mb-6' : product.id === 3 ? 'mt-0' : '' }`}
 
                 />
               </motion.div>
-              <div className="font-clash absolute bottom-[-0] left-0 right-0 bg-blue-800 text-white font-bold text-sm rounded-b-lg w-[100%] px-4 py-2">Rugged Devices {product.name}</div>
+              <div className="font-sans absolute bottom-[-0] left-0 right-0 bg-blue-800 text-white font-bold text-sm rounded-b-lg w-[100%] px-4 py-2">{product.name}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Product Cards agm */}
+      <section id="agm" className="py-16 px-6 bg-gradient-to-b from-blue-300 to-blue-200 text-center relative">
+        <h3 className="font-sans text-2xl font-bold text-gray-900 text-left max-w-6xl mx-auto">AGM</h3>
+        <div className="h-[2px] w-full bg-blue-500 my-2"></div>
+        
+        <div className="mt-8 flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+          {AgmItems.map((product) => (
+            <motion.div
+              key={product.id}
+              className="relative w-72 p-6 rounded-2xl shadow-lg cursor-pointer overflow-hidden bg-white"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setSelectedProduct(product)}
+            >
+              {/* <div className="absolute inset-0 bg-orange-500 rounded-lg transform scale-105 z-[-1]"></div> */}
+              <div className="absolute top-2 right-2 w-4 h-4 bg-blue-800 rounded-full"></div>
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 2 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="mx-auto relative z-10" 
+
+                // className={`mx-auto ${product.id === 1 ? 'mt-10': product.id === 3 ? 'mt-10' : '' }`}
+              >
+                <Image src={product.image}
+                width={ [1].includes(product.id) ? 250 : 190 }
+                height={ [1].includes(product.id) ? 250 : 190 }
+                alt={product.name} 
+                className={`mx-auto ${product.id === 1 ? 'mt-0 pl-0' : product.id === 2 ? 'mt-0 pl-0' : '' }`}
+                />
+              </motion.div>
+              <div className="font-sans absolute bottom-[-0] left-0 right-0 bg-blue-800 text-white font-bold text-sm rounded-b-lg w-[100%] px-4 py-2">{product.name}</div>
             </motion.div>
           ))}
         </div>
@@ -208,14 +302,14 @@ const MobilePage = () => {
           onClick={() => setSelectedProduct(null)}
         >
           <motion.div 
-            className="bg-gradient-to-b from-black to-gray-900 p-6 rounded-3xl shadow-lg max-w-4xl flex flex-col relative items-center ml-4 mr-4 ms:mr-4 ms:ml-4 md:mr-0 md:ml-0"
+            className="bg-gradient-to-b from-black to-gray-900 p-6 rounded-3xl shadow-lg max-w-4xl md:max-w-[90%] flex flex-col relative items-center ml-4 mr-4 ms:mr-4 ms:ml-4 md:mr-0 md:ml-0"
             initial={{ y: 50 }}
             animate={{ y: 0 }}
             exit={{ y: 50 }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Judul dan Deskripsi */}
-            <div className="flex justify-between items-center w-full mb-4">
+            <div className="flex flex-wrap justify-center md:justify-between items-center w-full mb-4">
               <h4 className="text-2xl font-bold text-white text-left w-1/2 font-clash">
                 {selectedProduct.name}
               </h4>
@@ -224,40 +318,51 @@ const MobilePage = () => {
               </p> */}
             </div>
 
-            <div className="rounded-3xl bg-gradient-to-b from-gray-200 to-gray-100 flex w-full items-center shadow-lg p-6">
+            <div className="rounded-3xl bg-gradient-to-b from-gray-200 to-gray-100 flex flex-col md:flex-row max-h-[550px] md:max-h-none max-w-[370px] md:max-w-none items-center shadow-lg p-6">
               {/* Bagian Teks & Spesifikasi */}
-              <div className="w-1/1 text-gray-900 p-6 flex flex-col justify-between">
-                <div className="bg-gradient-to-b from-gray-900 to-gray-600 text-white p-4 rounded-xl shadow-md w-fit max-w-md">
+              <div className="w-full md:w-1/2 text-gray-900 p-6 flex flex-col justify-between mt-0">
+                {/* <div className="bg-gradient-to-b from-gray-900 to-gray-600 text-white p-3 rounded-xl shadow-md w-fit max-w-md">
                   <p className="text-sm text-white font-clash">{selectedProduct.description}</p>
-                </div>
-                <div className="grid grid-cols-3 gap-2 mt-4">
+                </div> */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
                   {Array.isArray(selectedProduct?.specs) &&
                     selectedProduct.specs.map((spec, index) => (
 
-                      <div key={index} className="bg-white p-2 rounded-lg shadow flex flex-col items-center">
-                        <Image 
-                          src={spec.icon} 
-                          width={17} 
-                          height={17} 
-                          alt={spec.name} 
-                          unoptimized 
+                      <div key={index} className="bg-white p-1 md:p-2 rounded-lg shadow flex flex-col items-center max-w-none">
+                        <Image
+                          src={spec.icon}
+                          width={18}
+                          height={18}
+                          alt={spec.name}
+                          unoptimized
                         />
-                        <span className="text-sm text-black mt-2 ">{spec.value}</span>
-                        <span className="text-xs text-gray-600">{spec.name}</span>
+                        <span className="text-xs text-black mt-2 font-clash text-center">{spec.value}</span>
+                        <span 
+                          className={`text-[10px] text-gray-600 font-clash text-center ${
+                            index === 1 ? "mt-0" : ""
+                          }`}
+                        >
+                          {spec.name}
+                        </span>
                       </div>
                     ))}
                 </div>
-                <button className="mt-4 bg-white text-gray-900 px-4 py-2 rounded">Contact</button>
+                  <a
+                  href={selectedProduct.brosur}
+                  target="blank"
+                  className="font-clash mt-2 bg-gradient-to-b from-gray-900 to-gray-600 text-white px-4 py-2 text-sm rounded text-center">
+                  Download Brosur
+                </a>
               </div>
 
               {/* Bagian Gambar */}
-              <div className="w-1/2 flex justify-end p-6">
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-0 md:mb-0 order-first md:order-none">
                 <Image 
                   src={selectedProduct.image} 
-                  width={350} 
-                  height={350} 
+                  width={200} 
+                  height={200} 
                   alt={selectedProduct.name} 
-                  className="drop-shadow-2xl"
+                  className="drop-shadow-2xl max-w-[170px] md:max-w-[300px] object-contain"
                 />
               </div>
             </div>
