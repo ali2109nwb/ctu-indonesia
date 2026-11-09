@@ -49,7 +49,7 @@ const specifications: Record<string, { label: string; value: string }[]> = {
   // ],
 };
 
-const page = () => {
+const Page = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [selectedSize, setSelectedSize] = useState("43");
   const [selectedBezel, setSelectedBezel] = useState("");
@@ -110,7 +110,7 @@ const page = () => {
             <main className="font-clash pt-8 md:pt-8 p-20 sm:pl-28 md:p-10 md:pl:2 h-[50vh] w-[70vh] ">
               {/* Judul yang berubah sesuai ukuran TV */}
               <h3 className="text-3xl font-bold">
-                {selectedSize}" Kiosk
+                {selectedSize}&quot; Kiosk
                 {/* {selectedBezel} */}
                 {/* {productCodes[selectedSize]} */}
               </h3>
@@ -133,7 +133,7 @@ const page = () => {
                         selectedSize === size ? "bg-white text-black font-bold shadow-md shadow-cyan-400/50" : "hover:bg-gray-600"
                       }`}
                     >
-                      {size}"
+                      {size}&quot;
                     </button>
                   ))}
                 </div>
@@ -194,5 +194,5 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;
 

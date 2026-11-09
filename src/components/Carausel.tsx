@@ -29,7 +29,7 @@ function createSlide(imageSrc: string, text: string) {
   );
 }
 
-export default () => {
+export default function Carousel() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -44,4 +44,4 @@ export default () => {
       {createSlide("/assets/news/digital-news.png", "Pemerintah terus mempercepat transformasi digital untuk mendukung kemandirian ekonomi, penguasaan teknologi, dan pengembangan sumber daya manusia (SDM) unggul . . . ")}
     </Swiper>
   );
-};
+}

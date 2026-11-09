@@ -33,14 +33,14 @@ export default function RecentProjects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-        <Link href="/reference">
-            <div key={project.id} className="relative group cursor-pointer ">
+        <Link key={project.id} href="/reference">
+            <div className="relative group cursor-pointer ">
                 <Image
                 src={project.image}
                 alt={project.title}
                 width={500}
                 height={400}
-                className="object-cover w-full h-80 rounded-lg transform transition duration-300 border-blue-400 shadow-md shadow-blue-400/50 : border-transparent"
+                className="object-cover w-full h-80 rounded-lg transform transition duration-300 border-blue-400 shadow-md shadow-blue-400/50"
                 />
                 <div className="font-semibold absolute bottom-0 left-0 w-full bg-blue-700 text-white text-sm p-2 rounded-b-lg transform transition duration-300">
                     <span className="text-left font-semibold">{project.title}</span>

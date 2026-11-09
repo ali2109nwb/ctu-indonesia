@@ -34,7 +34,7 @@ const ReferencePage = () => {
           <div className="text-center mt-20 mb-8 font-clash">
             <h3 className="text-3xl font-bold text-white mb-4">READY TO TRANSFORM YOUR ROOM?</h3>
             <p className="text-gray-300 max-w-2xl mx-auto mb-6 font-clash text-sm">
-              Welcome to your one-stop destination for room transformation! Whether you're looking to create a cozy sanctuary, a modern workspace, or a vibrant living area, we're here to help you turn your vision into reality.
+              Welcome to your one-stop destination for room transformation! Whether you&apos;re looking to create a cozy sanctuary, a modern workspace, or a vibrant living area, we&apos;re here to help you turn your vision into reality.
             </p>
             <Link href="/contact">
               <button className="bg-blue-500 text-white text-lg font-semibold px-6 py-2 rounded-full hover:bg-blue-600 transition-all">

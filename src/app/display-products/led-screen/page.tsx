@@ -108,7 +108,7 @@ const specifications: Record<string, { label: string; value: string }[]> = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [selectedSize, setSelectedSize] = useState("P0.9");
   const [selectedBezel, setSelectedBezel] = useState("");
@@ -254,5 +254,5 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;
 

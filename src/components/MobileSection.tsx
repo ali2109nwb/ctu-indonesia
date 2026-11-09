@@ -23,7 +23,7 @@ export default function MobileSection() {
         className="object-cover"
     />
         <div className="mt-28 relative z-10 w-full max-w-3xl p-4 text-white">
-        <h2 className="text-3xl font-extrabold mb-8 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">MOBILE SOLUTIONS</h2>
+        <h2 className="text-3xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">MOBILE SOLUTIONS</h2>
         <div className="flex justify-center space-x-4 my-4">
           {devices.map((device) => (
             <button
@@ -42,7 +42,7 @@ export default function MobileSection() {
           width={270}
           height={300}
           />
-          <h3 className="text-xl font-extrabold mt-2 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">{selectedDevice.name}</h3>
+          <h3 className="text-xl font-extrabold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">{selectedDevice.name}</h3>
           <Link href="/mobile-products" className="mt-4 bg-orange-500 hover:bg-orange-400 shadow-md shadow-orange-300 transition duration-300 text-white px-4 py-2 rounded-lg mb-28">
             More Info →
           </Link>

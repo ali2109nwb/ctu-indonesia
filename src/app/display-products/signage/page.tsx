@@ -101,7 +101,7 @@ const specifications: Record<string, { label: string; value: string }[]> = {
   ],
 };
 
-const page = () => {
+const Page = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [selectedSize, setSelectedSize] = useState("32");
   const [selectedBezel, setSelectedBezel] = useState("0.8");
@@ -163,7 +163,7 @@ const page = () => {
             <main className="font-clash pt-10 p-1 md:px-24 lg:min-h-[80vh]">
               {/* Judul yang berubah sesuai ukuran TV */}
               <h3 className="text-3xl font-bold">
-                {selectedSize}" DIGITAL SIGNAGE
+                {selectedSize}&quot; DIGITAL SIGNAGE
                 {/* {selectedBezel} */}
                 {/* {productCodes[selectedSize]} */}
               </h3>
@@ -186,7 +186,7 @@ const page = () => {
                         selectedSize === size ? "bg-white text-black font-bold shadow-md shadow-cyan-400/50" : "hover:bg-gray-700"
                       }`}
                     >
-                      {size}"
+                      {size}&quot;
                     </button>
                   ))}
                 </div>
@@ -247,5 +247,5 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;
 

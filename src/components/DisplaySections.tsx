@@ -30,7 +30,7 @@ export default function DisplaySections() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-3xl p-4 text-white">
-        <h2 className="text-3xl font-extrabold mb-8 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">DISPLAY & LED SOLUTIONS</h2>
+        <h2 className="text-3xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">DISPLAY & LED SOLUTIONS</h2>
         <div className="flex justify-center space-x-4 mb-6">
           {devices.map((device) => (
             <button
@@ -49,7 +49,7 @@ export default function DisplaySections() {
           width={selectedDevice.id === 1 ? 300 : selectedDevice.id === 2 ? 350 : 270}
           height={selectedDevice.id === 1 ? 300 : selectedDevice.id === 2 ? 350 : 300}
           />
-          <h3 className="text-2xl font-extrabold mt-6 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">{selectedDevice.name}</h3>
+          <h3 className="text-2xl font-extrabold mt-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white drop-shadow-[2px_2px_4px_black]">{selectedDevice.name}</h3>
           <Link href="/display-products" className="mt-6 bg-blue-500 hover:bg-blue-600 shadow-md shadow-blue-400/50 transition duration-300 text-white px-4 py-2 rounded-lg">
             More Info →
           </Link>
