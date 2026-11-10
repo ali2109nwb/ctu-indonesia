@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const images = [
-  "/assets/product/display/digital-signage3-removebg-preview.png",
+  "/assets/product/display/digital-signage-all.png",
   "/assets/product/display/signage-digital4.jpg",
   "/assets/product/display/signage-dig5.jpg",
   "/assets/product/display/digital-signage-3.jpg",
@@ -136,7 +136,7 @@ const Page = () => {
           <div className="w-full lg:w-1/2">
             <Image 
               src={selectedImage} 
-              alt="QLED TV"
+              alt="Digital signage"
               width={500}
               height={400}
               className="rounded-lg shadow-lg shadow-blue-400/50"
