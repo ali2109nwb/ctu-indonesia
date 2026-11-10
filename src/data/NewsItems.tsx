@@ -10,14 +10,14 @@ const newsItems = [
     { 
       id: 2, 
       title: "Videotron Terbakar", 
-      image: "/assets/news/videotron-news.png", 
+      image: "/assets/news/videotron-news.PNG",
       link: "https://video.kompas.com/watch/731522/index.html",
       description: "Api dari lantai 7 gedung K-Link tower sambar videotron"
     },
     { 
       id: 3, 
       title: "Fokus Digitalisasi pada 2025",
-      image: "/assets/news/digital-news.png",
+      image: "/assets/news/digital-news.PNG",
       link: "https://nasional.kompas.com/read/2025/01/31/20520291/fokus-digitalisasi-pada-2025-pemerintah-bakal-gencarkan-ai-dan-ekonomi",
       description: "Pemerintah terus mempercepat transformasi digital untuk mendukung kemandirian ekonomi, penguasaan teknologi, dan pengembangan sumber daya manusia (SDM) unggul . . . ."
     },

@@ -39,9 +39,9 @@ export default function Carousel() {
       pagination={{ clickable: true }}
       className="mt-38"
     >
-      {createSlide("/assets/news/videotron-news.png", "Sambar Videotron api dari lantai 7 gedung K-Link . . .")}
+      {createSlide("/assets/news/videotron-news.PNG", "Sambar Videotron api dari lantai 7 gedung K-Link . . .")}
       {createSlide("/assets/news/newsiphone16-back.jpg", "Pemerintah melalui Kementerian Perindustrian (Kemenperin) berencana memblokir atau menonaktifkan nomor seri International Mobile Equipment Identity (IMEI) iPhone 16 . . .")}
-      {createSlide("/assets/news/digital-news.png", "Pemerintah terus mempercepat transformasi digital untuk mendukung kemandirian ekonomi, penguasaan teknologi, dan pengembangan sumber daya manusia (SDM) unggul . . . ")}
+      {createSlide("/assets/news/digital-news.PNG", "Pemerintah terus mempercepat transformasi digital untuk mendukung kemandirian ekonomi, penguasaan teknologi, dan pengembangan sumber daya manusia (SDM) unggul . . . ")}
     </Swiper>
   );
 }
